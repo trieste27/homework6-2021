@@ -7,19 +7,138 @@ body{
 
 header{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
   
 .nav_links{
     /*display: inline-flex;*/
+    display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    /*justify-content: space-around;
+    flex-wrap: wrap;*/
   }
 
-.nav_item a:link, a:hover{
+a:visited{
     color:blue;
 }
+
+div > header{
+    background:  #288088;
+    border: 2px solid #45ADAD;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.pricing{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    flex-basis: 450px;
+}
+
+.card_big{
+    flex-basis: 450px;
+}
+
+#image1, #image2, #image3, #image4, #image5{
+    border: 10px solid #50C7C7;
+    margin: 10px 10px 10px 10px;
+    width: 300px;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@keyframes grow{
+    from {width: 50px ;}
+    to {width: 425px ;}
+    from {opacity: 0 ;}
+    to {opacity: 1 ;}
+}
+
+#logo{
+    animation-name: grow;
+    animation-duration: 5s;
+}
+
+@media only screen and (min-width: 850px){
+    header{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    body > header{
+        position: sticky;
+        top: 0;
+    }
+
+    .nav_links{
+        flex-direction: row;
+    }
+
+    .card{
+        flex-basis: 250px;
+    }
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+    header{
+        animation-name: dissolve;
+    }
+}
+
+@media print{
+    body{
+        background-image: none;
+    }
+
+    nav{
+        width: 100%
+    }
+
+    .nav_links{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .pricing{
+        flex-wrap: nowrap;
+        align-items: flex-end
+    }
+
+    .gallery, #gallery, #image1, #image2, #image3, #image4, #image5{
+        display: none;
+    }
+
+    .card{
+        flex-basis: 250px;
+        border: 2px solid #45ADDD;
+    }
+
+    .card li:nth-of-type(odd)::before{
+        content:"👍";
+    }
+
+    .card li:nth-of-type(even)::after{
+        content: "👍";
+    }
+}
+
+
+
+
+
+
 
 
 
