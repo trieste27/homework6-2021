@@ -9,3 +9,17 @@ header{
     display: flex;
     justify-content: center;
 }
+  
+.nav_links{
+    /*display: inline-flex;*/
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+.nav_item a:link, a:hover{
+    color:blue;
+}
+
+
+
