@@ -92,8 +92,8 @@ div > header{
 }
 
 @media screen and (prefers-reduced-motion: reduce){
-    header{
-        animation-name: dissolve;
+    #logo{
+        animation:none;
     }
 }
 
